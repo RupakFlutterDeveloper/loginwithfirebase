@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "887606321214",
+    "project_id": "escortservic-6dfb2",
+    "storage_bucket": "escortservic-6dfb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887606321214:android:071253ec0f670f53dbb16f",
+        "android_client_info": {
+          "package_name": "com.example.escortservic"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjWWVa8TnLCTB2ugVe-UKlx1YIVFEF4SQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
