@@ -9,8 +9,12 @@ class FirebaseAuthBloc extends Bloc<FirebaseAuthEvent, FirebaseAuthState> {
     on<SignupButtonPressedEvent>(
       (event, emit) async {
         try {
-          await firebaseService.signupFirebase(event.userModel);
-          emit(FirebaseAuthSignupSuccess());
+          var result = await firebaseService.signupFirebase(event.userModel);
+          if (result != null) {
+            emit(FirebaseAuthSignupSuccess());
+          } else {
+            emit(FirebaseAuthFailure("Invalid Email or Password"));
+          }
         } catch (e) {
           emit(FirebaseAuthFailure("${e.toString()}"));
         }
@@ -20,8 +24,13 @@ class FirebaseAuthBloc extends Bloc<FirebaseAuthEvent, FirebaseAuthState> {
     on<LoginButtonPressedEvent>(
       (event, emit) async {
         try {
-          await firebaseService.loginFirebase(event.userModel);
-          emit(FirebaseAuthLoginSuccess());
+          var result = await firebaseService.loginFirebase(event.userModel);
+          if (result != null) {
+            emit(FirebaseAuthLoginSuccess());
+            print("Logic successful");
+          } else {
+            emit(FirebaseAuthFailure("Invalid Email or Password"));
+          }
         } catch (e) {
           emit(FirebaseAuthFailure("${e.toString()}"));
         }

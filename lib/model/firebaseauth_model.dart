@@ -1,11 +1,11 @@
 class FirebaseAuthModel {
-  final String? userName;
-  final String? userEmail;
-  final String? userPassword;
-  final num? userNumber;
-  final String? userAddress;
+  String? userName;
+  String? userEmail;
+  String? userPassword;
+  num? userNumber;
+  String? userAddress;
 
-  final String? userGender;
+  String? userGender;
   FirebaseAuthModel({
     this.userName,
     this.userEmail,

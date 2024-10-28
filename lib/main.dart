@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
         create: (context) => FirebaseAuthBloc(FirebaseAuthService()),
-        child: LoginScreen(),
+        child: LoginPage(),
       ),
     );
   }
