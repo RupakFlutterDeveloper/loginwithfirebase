@@ -24,7 +24,6 @@ class FirebaseAuthService {
         'userPassword': userData.userPassword,
         'userNumber': userData.userNumber,
         'userGender': userData.userGender,
-        'penisLength': userData.penisLength,
         'userAddress': userData.userAddress,
       });
 

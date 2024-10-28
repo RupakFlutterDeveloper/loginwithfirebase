@@ -4,7 +4,7 @@ class FirebaseAuthModel {
   final String? userPassword;
   final num? userNumber;
   final String? userAddress;
-  final num? penisLength;
+
   final String? userGender;
   FirebaseAuthModel({
     this.userName,
@@ -12,7 +12,6 @@ class FirebaseAuthModel {
     this.userPassword,
     this.userNumber,
     this.userGender,
-    this.penisLength,
     this.userAddress,
   });
   factory FirebaseAuthModel.fromJson(Map<String, dynamic> json) {
@@ -22,7 +21,6 @@ class FirebaseAuthModel {
       userPassword: json['userPassword'],
       userNumber: json['userNumber'],
       userGender: json['userGender'],
-      penisLength: json['penisLength'],
       userAddress: json['userAddress'],
     );
   }
@@ -33,7 +31,6 @@ class FirebaseAuthModel {
       'userPassword': userPassword,
       'userNumber': userNumber,
       'userGender': userGender,
-      'penisLength': penisLength,
       'userAddress': userAddress,
     };
   }
