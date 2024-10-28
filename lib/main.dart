@@ -1,9 +1,10 @@
+import 'package:escortservic/auth_reposetory/firebaseAuthentaction.dart';
+import 'package:escortservic/bloc/auth_bloc.dart';
 import 'package:escortservic/firebase_options.dart';
 import 'package:escortservic/screens/firebase_Auth/login_page.dart';
-import 'package:escortservic/screens/firebase_Auth/signup_page.dart';
-import 'package:escortservic/userlocation_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +39,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      home: BlocProvider(
+        create: (context) => FirebaseAuthBloc(FirebaseAuthService()),
+        child: LoginScreen(),
+      ),
     );
   }
 }
